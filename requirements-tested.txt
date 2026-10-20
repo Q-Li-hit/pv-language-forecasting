@@ -1,0 +1,11 @@
+# Versions used for local package checks; install a suitable torch wheel first.
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.2.3
+scikit-learn==1.6.1
+joblib==1.6.0
+lightgbm==4.6.0
+torch==2.7.0
+transformers==5.12.1
+# Optional local-context adapter; its large-model inference was not rerun.
+tabpfn==9.1.0

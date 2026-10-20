@@ -1,0 +1,12 @@
+{
+  "d_model": 64,
+  "heads": 4,
+  "layers": 2,
+  "dropout": 0.08,
+  "patch_length": 8,
+  "patch_stride": 4,
+  "time_llm_prototypes": 128,
+  "full_backbone_layers": 28,
+  "prompt_max_length": 128,
+  "domain_prompt_max_length": 192
+}

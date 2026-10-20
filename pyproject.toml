@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pv-language-forecasting"
+version = "0.1.0"
+description = "Controlled weather encoding and sequence forecasting for equivalent photovoltaic power"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=2.0,<3",
+  "scipy>=1.13,<2",
+  "pandas>=2.2,<3",
+  "scikit-learn>=1.5,<2",
+]
+
+[project.optional-dependencies]
+neural = ["torch>=2.7,<2.8", "transformers>=4.51,<6", "safetensors>=0.4"]
+trees = ["lightgbm>=4.6,<5"]
+tabular = ["tabpfn==9.1.0"]
+all = ["torch>=2.7,<2.8", "transformers>=4.51,<6", "safetensors>=0.4", "lightgbm>=4.6,<5", "joblib>=1.4"]
+
+[project.scripts]
+pvforecast = "pvforecast.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
